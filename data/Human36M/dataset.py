@@ -5,8 +5,6 @@ import torch
 import json
 import copy
 import transforms3d
-import scipy.sparse
-import cv2
 from pycocotools.coco import COCO
 
 from core.config import cfg 

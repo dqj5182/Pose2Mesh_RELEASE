@@ -1,10 +1,8 @@
 import os
 import argparse
 import torch
-import __init_path
-import shutil
 
-from funcs_utils import save_checkpoint, save_plot, check_data_pararell, count_parameters
+from funcs_utils import save_checkpoint, save_plot, check_data_pararell
 from core.config import cfg, update_config
 
 parser = argparse.ArgumentParser(description='Train Pose2Mesh')

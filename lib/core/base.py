@@ -1,21 +1,14 @@
-import os.path as osp
-import numpy as np
-import cv2
-import math
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from collections import Counter
 
-import Human36M.dataset, SURREAL.dataset, COCO.dataset, PW3D.dataset, AMASS.dataset, MuCo.dataset, FreiHAND.dataset
 import models
 from multiple_datasets import MultipleDatasets
 from core.loss import get_loss
 from core.config import cfg
-from display_utils import display_model
-from funcs_utils import get_optimizer, load_checkpoint, get_scheduler, count_parameters, stop, lr_check, save_obj
-from vis import vis_2d_pose, vis_3d_pose
+from funcs_utils import get_optimizer, load_checkpoint, get_scheduler, count_parameters, lr_check
 
 
 def get_dataloader(args, dataset_names, is_train):
